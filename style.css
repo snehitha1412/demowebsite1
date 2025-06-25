@@ -1,117 +1,140 @@
-.header{
-    background:linear-gradient(135deg,   #a8629c,#53014c,#df48bf);
-    text-align: center;
-    font-family: cursive;
-    color: #df48bf;
-    .minus1{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-    border-spacing: 100px;
-    border-color: rgb(157, 44, 44);
-    .minus1 {
-        color: palevioletred;
-        text-shadow:  2px #53014c;
-    }
-    color: lin;
-}
-img{
-     border-radius: 20px;
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.one{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f5d5d5;
-    text-align: center;
-    padding-top: 8px;
-    border: color 1px rgb(77, 135, 77);
-    border-radius: 10px;
+/* Header */
+.header {
+  background: linear-gradient(135deg, #a8629c, #53014c, #df48bf);
+  text-align: center;
+  font-family: cursive;
+  color: #df48bf;
+  padding: 20px 10px;
+}
+.header h1 {
+  color: white;
+}
+.header .minus1 {
+  font-family: 'Lucida Sans', sans-serif;
+  color: palevioletred;
+  text-shadow: 2px 2px #53014c;
+}
 
-    .sun{
-        height: 10px;
-    }
+/* Today's Special */
+.one {
+  background-color: #f5d5d5;
+  text-align: center;
+  padding: 20px 10px;
 }
-.icescreams{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:linear-gradient(10deg ,#a51f84,#73a1e3,#7fe142);
-    text-align: center;
-    padding-top: 8px;
-    border: color 1px red;
-    border-radius: 10px;
-    img{
-        height: 150px;
-    }   
+.one img.sun {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
-button{
-    background-color: chartreuse;
-    transition: color 1s linear 1s;
-    transform: transform 2s ease-out 1s;
-}
-     button:hover{
-        background-color: rgb(153, 226, 43);
-        color: rgb(229, 240, 236);
-        transform: translateY(-5px);
-        border-radius: 2cm;
-     }
-img:hover{
-    
-        box-shadow: 10cm;
-        transform: translateY(-10px);
-        transform: scale(1.5);
-    }
 
+/* Ice Cream Section */
+.icescreams {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: linear-gradient(10deg, #a51f84, #73a1e3, #7fe142);
+  padding: 20px;
+  gap: 20px;
+}
+.icescreams section {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.icescreams img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+.icescreams img:hover {
+  transform: scale(1.1);
+}
+h4 {
+  margin: 10px 0;
+  font-size: 1rem;
+  background: linear-gradient(5deg, #df48bf, #5c86c1, #7fe142);
+  padding: 5px;
+  border-radius: 8px;
+}
+
+/* Buttons */
+button {
+  background-color: chartreuse;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: rgb(153, 226, 43);
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* Offer Section */
 .offer {
   background: #fff4a3;
   border: 2px solid #ffae00;
-  padding: 10px 20px;
-  margin-top: 20px;
-  font-weight: bold;
+  padding: 20px;
+  margin: 20px auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 1.2rem;
   text-align: center;
-  font-size: 1.2em;
-}
-h4{
-    border:  1px solid #fcfcfc;
-    background:linear-gradient(5deg ,#df48bf,#5c86c1,#7fe142);
-    border-radius: 10px;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .spark-btn {
-  position: relative;
   background-color: #e44545;
   color: white;
-  
   padding: 12px 24px;
   font-size: 1rem;
   border-radius: 10px;
-  
-  overflow: hidden;
-  z-index: 1;
+  animation: pulse 1s ease-in-out infinite;
   transition: transform 0.2s ease;
 }
-
-.spark-btn:hover {
-  animation: pulse 1s ease-in-out infinite;
-}
-
-
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }
   100% { transform: scale(1); }
 }
 
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .icescreams {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .icescreams section {
+    max-width: 90%;
+  }
 
+  .header h1 {
+    font-size: 1.5rem;
+  }
 
+  h4 {
+    font-size: 0.9rem;
+  }
 
+  .offer {
+    font-size: 1rem;
+  }
 
-
+  .spark-btn {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+}
