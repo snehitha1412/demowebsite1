@@ -1,0 +1,117 @@
+.header{
+    background:linear-gradient(135deg,   #a8629c,#53014c,#df48bf);
+    text-align: center;
+    font-family: cursive;
+    color: #df48bf;
+    .minus1{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    border-spacing: 100px;
+    border-color: rgb(157, 44, 44);
+    .minus1 {
+        color: palevioletred;
+        text-shadow:  2px #53014c;
+    }
+    color: lin;
+}
+img{
+     border-radius: 20px;
+}
+
+.one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5d5d5;
+    text-align: center;
+    padding-top: 8px;
+    border: color 1px rgb(77, 135, 77);
+    border-radius: 10px;
+
+    .sun{
+        height: 10px;
+    }
+}
+.icescreams{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(10deg ,#a51f84,#73a1e3,#7fe142);
+    text-align: center;
+    padding-top: 8px;
+    border: color 1px red;
+    border-radius: 10px;
+    img{
+        height: 150px;
+    }   
+}
+button{
+    background-color: chartreuse;
+    transition: color 1s linear 1s;
+    transform: transform 2s ease-out 1s;
+}
+     button:hover{
+        background-color: rgb(153, 226, 43);
+        color: rgb(229, 240, 236);
+        transform: translateY(-5px);
+        border-radius: 2cm;
+     }
+img:hover{
+    
+        box-shadow: 10cm;
+        transform: translateY(-10px);
+        transform: scale(1.5);
+    }
+
+.offer {
+  background: #fff4a3;
+  border: 2px solid #ffae00;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  font-size: 1.2em;
+}
+h4{
+    border:  1px solid #fcfcfc;
+    background:linear-gradient(5deg ,#df48bf,#5c86c1,#7fe142);
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.spark-btn {
+  position: relative;
+  background-color: #e44545;
+  color: white;
+  
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 10px;
+  
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.2s ease;
+}
+
+.spark-btn:hover {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+
+
+
+
+
+
